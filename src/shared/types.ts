@@ -1,5 +1,6 @@
 
 export interface Customer {
-    name: String
-    lastVisit?: Date
+    id?: number
+    name: string
+    lastVisit?: string
 }

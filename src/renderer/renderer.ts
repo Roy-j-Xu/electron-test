@@ -29,3 +29,13 @@
 import './index.css';
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
+
+document.getElementById("add-customer-btn").addEventListener(
+    "click",
+    async (event) => await api.customers.create({name: "ABC"})
+);
+
+document.getElementById("show-customers-btn").addEventListener(
+    "click",
+    async (event) => console.log(await api.customers.getAll())
+);
